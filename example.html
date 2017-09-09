@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Game with score</title>
+<style>
+body {
+  padding:0;
+  margin:0;
+  background:#666;
+}
+canvas {
+  display:block;
+  margin:30px auto 0;
+  border:1px dashed #ccc;
+  background:#000;
+}
+</style>
+<script>
+var canvas,
+    ctx,
+    width = 600,
+    height = 600,
+    enemyTotal = 5,
+    enemies = [],
+    enemy_x = 50,
+    enemy_y = -45,
+    enemy_w = 50,
+    enemy_h = 38,
+    speed = 6,
+    enemy,
+    rightKey = false,
+    leftKey = false,
+    upKey = false,
+    downKey = false,
+    ship,
+    ship_x = (width / 2) - 25, ship_y = height - 75, ship_w = 50, ship_h = 57,
+    alive = true;
+
+for (var i = 0; i < enemyTotal; i++) {
+ enemies.push([enemy_x, enemy_y, enemy_w, enemy_h, speed]);
+ enemy_x += enemy_w + 60;
+}
+
+function clearCanvas() {
+ ctx.clearRect(0,0,width,height);
+}
+
+function drawEnemies() {
+ for (var i = 0; i < enemies.length; i++) {
+   ctx.drawImage(enemy, enemies[i][1], enemies[i][0]);
+ }
+}
+
+function drawShip() {
+ if (rightKey) ship_y += 5;
+ else if (leftKey) ship_y -= 5;
+ if (upKey) ship_x -= 5;
+ else if (downKey) ship_x += 5;
+ if (ship_x <= 0) ship_x = 0;
+ if ((ship_x + ship_w) >= width) ship_x = width - ship_w;
+  if (ship_y <= 0) ship_y = 0;
+ if ((ship_y + ship_h) >= height) ship_y = height - ship_h;
+  ctx.drawImage(ship, ship_y, ship_x);
+}
+
+function moveEnemies() {
+  for (var i = 0; i < enemies.length; i++) {
+   if (enemies[i][1] < height) {
+     enemies[i][1] += enemies[i][4];
+   } else if (enemies[i][1] > height - 1) {
+      enemies[i][1] = -50;
+    }
+  }
+}
+
+function shipCollision() {
+  var ship_xw = ship_x + ship_w,
+      ship_yh = ship_y + ship_h;
+  for (var i = 0; i < enemies.length; i++) {
+   if (ship_x > enemies[i][0] && ship_x < enemies[i][0] + enemy_w && ship_y > enemies[i][1] && ship_y < enemies[i][1] + enemy_h) {
+     alive = false;
+    }
+    if (ship_xw < enemies[i][0] + enemy_w && ship_xw > enemies[i][0] && ship_y > enemies[i][1] && ship_y < enemies[i][1] + enemy_h) {
+     alive = false;
+    }
+    if (ship_yh > enemies[i][1] && ship_yh < enemies[i][1] + enemy_h && ship_x > enemies[i][0] && ship_x < enemies[i][0] + enemy_w) {
+     alive = false;
+    }
+    if (ship_yh > enemies[i][1] && ship_yh < enemies[i][1] + enemy_h && ship_xw < enemies[i][0] + enemy_w && ship_xw > enemies[i][0]) {
+     alive = false;
+    }
+  }
+}
+
+function init() {
+  canvas = document.getElementById('canvas');
+  ctx = canvas.getContext('2d');
+  enemy = new Image();
+  enemy.src = '8bit_enemy.png';
+  ship = new Image();
+  ship.src = 'ship.png';
+  //setInterval(gameLoop, 25);
+  document.addEventListener('keydown', keyDown, false);
+  document.addEventListener('keyup', keyUp, false);
+  gameLoop();
+}
+function gameLoop() {
+  clearCanvas();
+  if (alive) {
+    shipCollision();
+    moveEnemies();
+    drawEnemies();
+    drawShip(); 
+  }
+  game = setTimeout(gameLoop, 1000 / 30);
+}
+
+function keyDown(e) {
+  if (e.keyCode == 39) rightKey = true;
+  else if (e.keyCode == 37) leftKey = true;
+  if (e.keyCode == 38) upKey = true;
+  else if (e.keyCode == 40) downKey = true;
+  
+}
+
+function keyUp(e) {
+  if (e.keyCode == 39) rightKey = false;
+  else if (e.keyCode == 37) leftKey = false;
+  if (e.keyCode == 38) upKey = false;
+  else if (e.keyCode == 40) downKey = false;
+}
+
+window.onload = init;
+</script>
+</head>
+
+<body>
+  <canvas id="canvas" width="600" height="600"></canvas>
+</body>
+</html>

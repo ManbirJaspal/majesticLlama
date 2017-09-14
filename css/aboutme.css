@@ -12,7 +12,7 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-header{
+.aboutme{
     background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(14125035_1181042655249438_5486190309035942648_o.jpg);
     height: 100vh;
     background-size: cover;
@@ -44,8 +44,8 @@ h1{
     letter-spacing: 1px;
 }
 
-h2 { 
-    font-size: 124px;
+.h2aboutme{ 
+    font-size: 10px;
     word-spacing: 2px;
     text-align: center;
     margin-bottom: 30px;
@@ -95,12 +95,12 @@ ul{
     *display: inline;
     zoom: 1
 }
-.hheading{
+.h2aboutme{
     color: white;
     font-size: 90px;
 }
 
-.hheading:after {
+.h2aboutme:after {
     display:block;
     height: 2px;
     background-color: #e67e22;
@@ -114,8 +114,8 @@ ul{
     background-color: #d9d9d9;
 }
 
-a:link,
-a:visited {
+a.linkaboutme:link,
+a.linkaboutme:visited {
     color: white;
     text-decoration: none;
     padding-bottom: 1px;

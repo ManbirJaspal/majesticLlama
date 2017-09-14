@@ -1,4 +1,7 @@
-
+*{
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
 header {
     background-image: url(llama.jpg);
     height: 100vh;
@@ -17,15 +20,6 @@ header {
     height: auto;
     padding-left: 2%;
     
-}
-h1:after {
-    display:block;
-    height: 2px;
-    background-color: #ff7800;
-    content:" ";
-    width: 100px;
-    margin: 11%;
-    margin-top: 30px;
 }
 
 @keyframes fadein {

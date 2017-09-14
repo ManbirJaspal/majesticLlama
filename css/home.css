@@ -9,18 +9,34 @@ header {
     background-position: center;
     background-attachment: fixed;
     animation: fadein 2s;
+    margin-top: -20px
 }
 
 .llama {
     padding-top: 20%;
     color: aliceblue;
     font-weight: 300;
-    font-size: 300%;
+    font-size: 290%;
     animation: fadein 6s;
     height: auto;
     padding-left: 2%;
     
 }
+
+.llama:after {
+    display:block;
+    height: 1px;
+    background-color: #e67e22;
+    content:" ";
+    width: 7%;
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-left: 11%;
+    
+}
+
+
+
 
 @keyframes fadein {
     from { opacity: 0; }

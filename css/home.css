@@ -1,0 +1,35 @@
+
+header {
+    background-image: url(llama.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: fadein 2s;
+}
+
+.llama {
+    padding-top: 20%;
+    color: aliceblue;
+    font-weight: 300;
+    font-size: 300%;
+    animation: fadein 6s;
+    height: auto;
+    padding-left: 2%;
+    
+}
+h1:after {
+    display:block;
+    height: 2px;
+    background-color: #ff7800;
+    content:" ";
+    width: 100px;
+    margin: 11%;
+    margin-top: 30px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+

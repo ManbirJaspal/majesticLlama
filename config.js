@@ -4,12 +4,18 @@ app.config(function($routeProvider,$locationProvider) {
      $locationProvider.hashPrefix('');
     $routeProvider
     .when("/home", {
-        templateUrl : "/views/home.html"
+        templateUrl : "/views/home.html",
+        controller: "homeController"
     })
     .when("/llama", {
-        templateUrl : "/views/llama.html"
+        templateUrl : "/views/llama.html",
+        controller: "llamaController"
     })
     .when("/aboutme", {
-        templateUrl : "/views/aboutme.html"
+        templateUrl : "/views/aboutme.html",
+        controller:"aboutmeController"
     })
+    .otherwise({
+                redirectTo: "/home"
+            });
     });

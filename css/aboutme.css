@@ -18,6 +18,7 @@ html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    margin-top: -32px
 }
 
 section {
@@ -49,10 +50,10 @@ h1,h2,h3,H4 {
     height: 1px;
     background-color: #e67e22;
     content:" ";
-    width: 9%;
+    width: 6%;
     margin: 0 auto;
     margin-top: 1%;
-    margin-left: 8%;
+    margin-left: 7%;
     
 }
 

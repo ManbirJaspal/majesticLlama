@@ -12,6 +12,22 @@ html {
     text-rendering: optimizeLegibility;
     
 }
+
+.funllama{
+    text-align: center;
+}
+
+.funllama:after {
+    display:block;
+    height: 1px;
+    background-color: #e67e22;
+    content:" ";
+    width: 7%;
+    margin: 0 auto;
+    margin-top: 1%;
+    
+    
+}
 .homeheader {
     background-image: url(llama.jpg);
     height: 100vh;
@@ -45,11 +61,20 @@ html {
     
 }
 
-
-
-
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.funllamalist{
+    margin-top: 30px;
+    font-size: 20px;
+    
+}
+
+.funllamalist li{
+    padding-top: 4px;
+    padding-right: 20%
+    
 }
 

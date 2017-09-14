@@ -20,8 +20,8 @@ var canvas,
     leftKey = false,
     upKey = false,
     downKey = false,
-    ship,
-    ship_x = (width / 2) - 25, ship_y = height - 75, ship_w = 50, ship_h = 57,
+    llama,
+    llama_x = (width / 2) - 25, llama_y = height - 75, llama_w = 50, llama_h = 57,
     score = 0,
     alive = true;
 
@@ -43,16 +43,17 @@ function drawrobots() {
  }
 }
 
-function drawShip() {
- if (rightKey) ship_y += 5;
- else if (leftKey) ship_y -= 5;
- if (upKey) ship_x -= 5;
- else if (downKey) ship_x += 5;
- if (ship_x <= 0) ship_x = 0;
- if ((ship_x + ship_w) >= width) ship_x = width - ship_w;
-  if (ship_y <= 0) ship_y = 0;
- if ((ship_y + ship_h) >= height) ship_y = height - ship_h;
-  ctx.drawImage(ship, ship_y, ship_x);
+function drawllama() {
+ if (rightKey) llama_y += 5;
+ else if (leftKey) llama_y -= 5;
+ if (upKey) llama_x -= 5;
+ else if (downKey) llama_x += 5;
+ if (llama_x <= 0) llama_x = 0;
+ if ((llama_x + llama_w) >= width) llama_x = width - llama_w;
+  if (llama_y <= 0) llama_y = 0;
+ if ((llama_y + llama_h) >= height) llama_y = height - llama_h;
+  ctx.drawImage(llama, llama_y, llama_x);
+     
 }
     
     function drawTony() {
@@ -106,27 +107,27 @@ function moverobots() {
 }
 
 
-function shipCollision() {
-  var ship_xw = ship_x + ship_w,
-      ship_yh = ship_y + ship_h;
+function llamaCollision() {
+  var llama_xw = llama_x + llama_w,
+      llama_yh = llama_y + llama_h;
   for (var i = 0; i < robots.length; i++) {
-   if (ship_x > robots[i][0] && ship_x < robots[i][0] + robot_h && ship_y > robots[i][1] && ship_y < robots[i][1] + robot_w) { 
+   if (llama_x > robots[i][0] && llama_x < robots[i][0] + robot_h && llama_y > robots[i][1] && llama_y < robots[i][1] + robot_w) { 
         robots.splice(i, 1);
         score += 10;
         robots.push([(Math.random() * 500) + 50, -45, robot_h, robot_w, speed]);
     }
-    else if (ship_xw < robots[i][0] + robot_h && ship_xw > robots[i][0] && ship_y > robots[i][1] && ship_y < robots[i][1] + robot_w) {
+    else if (llama_xw < robots[i][0] + robot_h && llama_xw > robots[i][0] && llama_y > robots[i][1] && llama_y < robots[i][1] + robot_w) {
         robots.splice(i, 1);
         score += 10;
         robots.push([(Math.random() * 500) + 50, -45, robot_h, robot_w, speed]);
      
     }
-    else if (ship_yh > robots[i][1] && ship_yh < robots[i][1] + robot_w && ship_x > robots[i][0] && ship_x < robots[i][0] + robot_h) {
+    else if (llama_yh > robots[i][1] && llama_yh < robots[i][1] + robot_w && llama_x > robots[i][0] && llama_x < robots[i][0] + robot_h) {
         robots.splice(i, 1);
         score += 10;
         robots.push([(Math.random() * 500) + 50, -45, robot_h, robot_w, speed]);
      }
-    else if (ship_yh > robots[i][1] && ship_yh < robots[i][1] + robot_w && ship_xw < robots[i][0] + robot_h && ship_xw > robots[i][0]) {
+    else if (llama_yh > robots[i][1] && llama_yh < robots[i][1] + robot_w && llama_xw < robots[i][0] + robot_h && llama_xw > robots[i][0]) {
         robots.splice(i, 1);
         score += 10;
         robots.push([(Math.random() * 500) + 50, -45, robot_h, robot_w, speed]);
@@ -151,8 +152,8 @@ ctx = canvas.getContext('2d');
 
   robot = new Image();
   robot.src = 'robot_pic.png';
-  ship = new Image();
-  ship.src = 'crazyllama.png';
+  llama = new Image();
+  llama.src = 'crazyllama.png';
   tony = new Image();
     tony.src= 'tony.png';
   document.addEventListener('keydown', keyDown, false);
@@ -162,12 +163,12 @@ ctx = canvas.getContext('2d');
 function gameLoop() {
   clearCanvas();
   if (alive) {
-    shipCollision();
+    llamaCollision();
        tonyCollision();
     moverobots();
     drawrobots();
       drawTony();
-      drawShip();  
+      drawllama();  
   }
   scoreTotal();
   game = setTimeout(gameLoop, 1000 / 30);

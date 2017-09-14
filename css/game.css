@@ -9,7 +9,7 @@ canvas {
   border:1px dashed #ccc;
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(backgroundimg.jpg);
   margin-bottom: 10px;
-    position: fixed;
+    position:static;
     
 }
 
@@ -18,7 +18,33 @@ canvas {
     
 }
 
-.canvasbackground{
-    padding-left: 30%;
-    
+.background{
+    background-image: url(space.jpg);
+    padding-bottom: 30px;
+}
+.heading{
+    color: white;
+    text-align: center;
+    padding-bottom: 20px
+    animation: fadein 2s;
+}
+
+.heading:after{
+    visibility: hidden;
+}
+
+.heading2{
+    color: white;
+    text-align: center;
+    animation: fadein 2s;
+}
+
+.heading2:after{
+    visibility: hidden;
+}
+
+.rage{
+    color: #e60000;
+    font-family:cursive;
+    font-size: 400%;
 }

@@ -8,7 +8,7 @@ html {
     background: #fff;
     font-family:'lato','Arial','sans-serif';
     font-weight: 300;
-    font-size: 20px;
+    font-size: 100%;
     text-rendering: optimizeLegibility;
     
 }
@@ -42,7 +42,7 @@ html {
     padding-top: 20%;
     color: aliceblue;
     font-weight: 300;
-    font-size: 290%;
+    font-size: 1.125em;
     animation: fadein 6s;
     height: auto;
     padding-left: 2%;

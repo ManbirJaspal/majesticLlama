@@ -36,14 +36,13 @@ html {
     background-position: center;
     background-attachment: fixed;
     animation: fadein 2s;
-    margin-top: -20px
+    margin-top: -20px;
 }
 
 .llama {
     padding-top: 20%;
     color: aliceblue;
     font-weight: 300;
-    font-size: 1.125em;
     animation: fadein 6s;
     height: auto;
     padding-left: 2%;

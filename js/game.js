@@ -23,7 +23,8 @@ var canvas,
     llama,
     llama_x = (width / 2) - 25, llama_y = height - 75, llama_w = 50, llama_h = 57,
     score = 0,
-    alive = true;
+    alive = true,
+    hasGameStarted = false;
 
 for (var i = 0; i < robotTotal; i++) {
 
@@ -149,6 +150,22 @@ function init() {
     canvas = document.getElementById("canvasnew");
     console.log("game canvas = " +canvas);
 ctx = canvas.getContext('2d');
+    
+    ctx.font = 'bold 18px Arial';
+  ctx.fillStyle = '#fff';
+ctx.fillText('ROBOTS ARE TAKING OVER THE DTLV', width/10, 100);
+    ctx.font = 'bold 15px Arial';
+    ctx.fillText('Tony is working on a way to completely disable the robot army', width/10, 150);
+    ctx.fillText('If tony dies the world will come to an end', width/10, 200);
+    ctx.fillText('The majestic llama is furious is going to help save the world', width/10, 250);
+    ctx.fillStyle = '#ff0000';
+    ctx.font = 'bold 25px Arial';
+    ctx.fillText('RAGE MODE ON!!!', width/3, 300);
+    ctx.font = 'bold 16px Arial';
+    ctx.fillStyle = '#ADD8E6';
+    ctx.fillText('USE ARROW KEYS TO USE LLAMA TO ATTACK ROBOTS', width/10, 350);
+    ctx.font = 'bold 25px Arial';
+    ctx.fillText('PRESS SPACEBAR TO BEGIN', width/6, 400);
 
   robot = new Image();
   robot.src = 'robot_pic.png';
@@ -156,11 +173,13 @@ ctx = canvas.getContext('2d');
   llama.src = 'crazyllama.png';
   tony = new Image();
     tony.src= 'tony.png';
+    
   document.addEventListener('keydown', keyDown, false);
   document.addEventListener('keyup', keyUp, false);
-  gameLoop();
+//  gameLoop();
 }
 function gameLoop() {
+    hasGameStarted = true;
   clearCanvas();
   if (alive) {
     llamaCollision();
@@ -179,6 +198,7 @@ function keyDown(e) {
   else if (e.keyCode == 37) leftKey = true;
   if (e.keyCode == 38) upKey = true;
   else if (e.keyCode == 40) downKey = true;
+    else if(e.keyCode == 32 && !hasGameStarted) gameLoop();
 }
 
 function keyUp(e) {

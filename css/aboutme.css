@@ -30,7 +30,7 @@ h1,h2,h3,H4 {
     text-transform: uppercase;
 }
 
-.h1aboutme{ 
+.h1aboutme{
     font-weight: 300;
     text-transform: uppercase;
     padding-top: 290px;
@@ -53,10 +53,10 @@ h1,h2,h3,H4 {
     margin: 0 auto;
     margin-top: 1%;
     margin-left: 7%;
-    
+
 }
 
-section .h2aboutme{ 
+section .h2aboutme{
     font-size: 70px;
     word-spacing: 2px;
     text-align: center;
@@ -73,7 +73,7 @@ section h2:after {
     margin-top: 10px;
 }
 
-h4{ 
+h4{
     text-align: center;
     word-spacing: 2px;
     text-align: center;
@@ -82,11 +82,10 @@ h4{
     font-size: 20px;
 }
 
-.quote { 
-     color: white;
+.quote {
+    color: white;
     background-color: #555;
     text-align: center;
-    
 }
 
 blockquote{
@@ -94,15 +93,15 @@ blockquote{
 }
 
 .hobbies{
-
     background-color: #d9d9d9;
     line-height: 1.5;
     letter-spacing: 1px;
     text-align: center;
     word-spacing: 1px;
-    
 }
-li{padding-top: 2px;
+
+li{
+    padding-top: 2px;
 }
 
 ul{
@@ -128,7 +127,6 @@ h2:after {
     width: 123px;
     margin: 0 auto;
     margin: 10px;
-    
 }
 
 .name{
@@ -144,10 +142,10 @@ h2:after {
     width: 80%;
     border: 0;
     margin: 0 auto;
-
 }
 
-p{  padding-top: 20px;
+p{  
+    padding-top: 20px;
     padding: 0 10%;
     font-size: 120%;
     line-height: 2;
@@ -162,13 +160,12 @@ p{  padding-top: 20px;
     word-spacing: 1px;
     text-align: center;
 }
-    
+
 .writtenblack{
-    
     color: #555;
-    text-align: center;      
-    }
-    
+    text-align: center;
+}
+
 .tech{
     padding-top: 30px;
 }

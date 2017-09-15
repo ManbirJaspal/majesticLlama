@@ -1,7 +1,6 @@
 *{
     letter-spacing: 1px;
     word-spacing: 1px;
-   
 }
 
 html {
@@ -10,7 +9,6 @@ html {
     font-weight: 300;
     font-size: 100%;
     text-rendering: optimizeLegibility;
-    
 }
 
 .funllama{
@@ -26,8 +24,6 @@ html {
     width: 7%;
     margin: 0 auto;
     margin-top: 1%;
-    
-    
 }
 .homeheader {
     background-image: url(../assets/llama.jpg);
@@ -46,7 +42,6 @@ html {
     animation: fadein 6s;
     height: auto;
     padding-left: 2%;
-    
 }
 
 .llama:after {
@@ -58,7 +53,6 @@ html {
     margin: 0 auto;
     margin-top: 1%;
     margin-left: 11%;
-    
 }
 
 @keyframes fadein {
@@ -69,12 +63,10 @@ html {
 .funllamalist{
     margin-top: 30px;
     font-size: 20px;
-    
 }
 
 .funllamalist li{
     padding-top: 10px;
-    padding-right: 20%
-    
+    padding-right: 20%;
 }
 

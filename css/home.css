@@ -15,6 +15,7 @@ html {
 
 .funllama{
     text-align: center;
+    color: #555;
 }
 
 .funllama:after {
@@ -73,7 +74,7 @@ html {
 }
 
 .funllamalist li{
-    padding-top: 4px;
+    padding-top: 10px;
     padding-right: 20%
     
 }

@@ -114,7 +114,6 @@ ul{
     text-align: justify;
     padding-right: 10%;
     font-size: 120%;
-    
     zoom: 1
 }
 .h2aboutme{
@@ -151,7 +150,8 @@ h2:after {
 
 p{  padding-top: 20px;
     padding: 0 10%;
-    font-size: 120%
+    font-size: 120%;
+    line-height: 2;
 }
 
 .techused{

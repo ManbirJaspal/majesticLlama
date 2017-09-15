@@ -22,7 +22,7 @@ html {
 }
 
 section {
-    padding: 80px 0;
+    padding: 20px 0;
 }
 
 h1,h2,h3,H4 {
@@ -65,14 +65,13 @@ section .h2aboutme{
     letter-spacing: 1px;
 }
 
-h2:after {
+section h2:after {
     display:block;
     height: 2px;
     background-color: #e67e22;
     content:" ";
-    width: 300px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 h4{ 
@@ -85,27 +84,36 @@ h4{
 }
 
 .quote { 
-    font-size: 300%;
-    background-color: #d9d9d9;
+     color: white;
+    background-color: #555;
     text-align: center;
+    
+}
+
+blockquote{
+    font-size: 200%
 }
 
 .hobbies{
 
-    background-color: #555;
-    color: white;
+    background-color: #d9d9d9;
     line-height: 1.5;
     letter-spacing: 1px;
-    text-align: justify;
+    text-align: center;
     word-spacing: 1px;
+    
 }
 li{padding-top: 2px;
 }
 
 ul{
-    padding-left: 25%;
+    color: #555;
+    padding-left: 10%;
     display: inline-block;
     *display: inline;
+    text-align: justify;
+    padding-right: 10%;
+    
     zoom: 1
 }
 .h2aboutme{
@@ -113,54 +121,24 @@ ul{
     font-size: 90px;
 }
 
-.h2aboutme:after {
+h2:after {
     display:block;
     height: 2px;
     background-color: #e67e22;
     content:" ";
     width: 123px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin: 10px;
+    
 }
 
 .name{
     background-color: #d9d9d9;
-}
-
-a.linkaboutme:link,
-a.linkaboutme:visited {
-    color: white;
-    text-decoration: none;
-    padding-bottom: 1px;
-    border-bottom: 1px solid #ffa500; 
-    transition: border-bottom 0.2s, color 0.2s;
-    border-bottom-color: #ffa500;
-
-}
-
-a:hover,
-a:active {
-    color:#ffa500 ;
-    border-bottom: 1px solid transparent; 
+    padding-top: -150%;
 }
 
 .hheading1{
     font-size: 90px;
-}
-
-
-ol{padding-left: 25%;
-display: inline-block;
-    *display: inline;
-    zoom: 1
-}
-
-.links{background-color: #555;
-    color: white;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    text-align: justify;
-    word-spacing: 1px;
 }
 
 .tcode{
@@ -168,4 +146,29 @@ display: inline-block;
     border: 0;
     margin: 0 auto;
 
+}
+
+p{  padding-top: 20px;
+    padding: 0 10%;
+    font-size: 120%
+}
+
+.techused{
+    background-color: #555;
+    color: white;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-align: justify;
+    word-spacing: 1px;
+    text-align: center;
+}
+    
+.writtenblack{
+    
+    color: #555;
+    text-align: center;      
+    }
+    
+.tech{
+    padding-top: 30px;
 }

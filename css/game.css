@@ -5,11 +5,12 @@ GAME.CSS
 */
 canvas {
   display:block;
-  margin:30px auto 0;
+  margin:117px auto 0;
   border:1px dashed #ccc;
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(backgroundimg.jpg);
   margin-bottom: 10px;
     position:static;
+    
     
 }
 

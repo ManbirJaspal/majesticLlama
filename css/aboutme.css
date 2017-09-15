@@ -113,6 +113,7 @@ ul{
     *display: inline;
     text-align: justify;
     padding-right: 10%;
+    font-size: 120%;
     
     zoom: 1
 }

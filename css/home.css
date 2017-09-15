@@ -30,7 +30,7 @@ html {
     
 }
 .homeheader {
-    background-image: url(llama.jpg);
+    background-image: url(../assets/llama.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;

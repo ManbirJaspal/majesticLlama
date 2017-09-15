@@ -7,8 +7,8 @@ app.config(function($routeProvider,$locationProvider) {
         templateUrl : "/views/home.html",
         controller: "homeController"
     })
-    .when("/llama", {
-        templateUrl : "/views/llama.html",
+    .when("/game", {
+        templateUrl : "/views/game.html",
         controller: "llamaController"
     })
     .when("/aboutme", {

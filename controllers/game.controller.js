@@ -168,15 +168,14 @@ ctx.fillText('ROBOTS ARE TAKING OVER THE DTLV', width/10, 100);
     ctx.fillText('PRESS SPACEBAR TO BEGIN', width/6, 400);
 
   robot = new Image();
-  robot.src = 'robot_pic.png';
+  robot.src = '../assets/robot_pic.png';
   llama = new Image();
-  llama.src = 'crazyllama.png';
+  llama.src = '../assets/crazyllama.png';
   tony = new Image();
-    tony.src= 'tony.png';
+    tony.src= '../assets/tony.png';
     
   document.addEventListener('keydown', keyDown, false);
   document.addEventListener('keyup', keyUp, false);
-//  gameLoop();
 }
 function gameLoop() {
     hasGameStarted = true;
